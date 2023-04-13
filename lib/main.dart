@@ -1,4 +1,5 @@
 import 'package:cat_facts/presentation/pages/home_screen.dart';
+import 'package:cat_facts/presentation/pages/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         appBarTheme: const AppBarTheme(color: Colors.amber),
       ),
-      home: const HomePage(),
+      home: const SplashScreen(),
     );
   }
 }
