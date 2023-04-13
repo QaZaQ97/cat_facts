@@ -4,6 +4,7 @@ import 'package:cat_facts/presentation/pages/history_screen.dart';
 import 'package:cat_facts/presentation/widgets/custom_button.dart';
 import 'package:cat_facts/presentation/widgets/image_widget.dart';
 import 'package:cat_facts/presentation/widgets/main_text_widget.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/adapters.dart';
@@ -23,7 +24,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Random Cat Facts and Images'),
+        title: Text(AppLocalizations.of(context)!.main_title),
       ),
       body: BlocProvider(
         create: (context) => CatCubit(),
@@ -36,7 +37,7 @@ class _HomePageState extends State<HomePage> {
               return Center(child: Lottie.asset('assets/loading_cat.json'));
             }
             if (state is CatErrorState) {
-              return const Center(child: Text('Error'));
+              return Center(child: Lottie.asset('assets/error_cat.json'));
             }
             if (state is CatLoadedState) {
               return Column(
@@ -56,7 +57,7 @@ class _HomePageState extends State<HomePage> {
                     children: [
                       /// button to navigate History screen
                       CustomButton(
-                        buttonText: 'Fact history',
+                        buttonText: AppLocalizations.of(context)!.fact_history,
                         onPress: () => Navigator.push(
                           context,
                           MaterialPageRoute(builder: (context) => const HistoryScreen()),
@@ -65,7 +66,7 @@ class _HomePageState extends State<HomePage> {
 
                       /// button to get new random fact and image
                       CustomButton(
-                        buttonText: 'Another fact',
+                        buttonText: AppLocalizations.of(context)!.another_fact,
                         onPress: () => setState(() {
                           context.read<CatCubit>().getCatData();
                           var facts = Hive.box('facts');
