@@ -1,16 +1,14 @@
 # cat_facts
 
-A new Flutter project.
+Apllication about cats.
 
-## Getting Started
+In app you can get random cat image and facts about cats from internet.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Stacks:
+  flutter_bloc: ^8.1.2
+  dio: ^5.1.1
+  hive: ^2.2.3
+  retrofit: ^4.0.1
+  json_annotation: ^4.8.0
+  hive_flutter: ^1.1.0
+  lottie: ^2.3.2
