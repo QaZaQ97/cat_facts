@@ -2,7 +2,8 @@
 
 Apllication about cats.
 
-In app you can get random cat image and facts about cats from internet.
+In app you can get random cat image and facts about cats from internet. 
+And save facts in history and clear the history.
 
 Stacks:
   flutter_bloc: ^8.1.2
