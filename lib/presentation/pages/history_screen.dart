@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HistoryScreen extends StatefulWidget {
   const HistoryScreen({Key? key});
@@ -17,14 +18,14 @@ class _HistoryScreenState extends State<HistoryScreen> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('History'),
+        title: Text(AppLocalizations.of(context)!.history),
         actions: [
           TextButton(
             onPressed: () => setState(() {
               box.isNotEmpty ?
               box.clear() : null;
             }),
-            child: const Text('Clear history'),
+            child: Text(AppLocalizations.of(context)!.clear),
           )
         ],
       ),
